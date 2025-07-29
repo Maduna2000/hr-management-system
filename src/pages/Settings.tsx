@@ -49,20 +49,20 @@ const Settings = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
         <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
         <button
           onClick={handleSaveSettings}
-          className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto justify-center"
         >
           <Save className="w-4 h-4 mr-2" />
           Save Changes
         </button>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Profile Settings */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="md:col-span-2 space-y-6">
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <div className="flex items-center mb-6">
               <User className="w-5 h-5 text-gray-600 mr-2" />
@@ -177,28 +177,28 @@ const Settings = () => {
             </div>
             
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-gray-50 rounded-lg gap-4">
                 <div>
                   <h3 className="font-medium text-gray-900">Export Data</h3>
                   <p className="text-sm text-gray-600">Download your personal data and activity</p>
                 </div>
                 <button
                   onClick={handleExportData}
-                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors w-full sm:w-auto justify-center"
                 >
                   <Download className="w-4 h-4 mr-2" />
                   Export
                 </button>
               </div>
               
-              <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 bg-gray-50 rounded-lg gap-4">
                 <div>
                   <h3 className="font-medium text-gray-900">Import Data</h3>
                   <p className="text-sm text-gray-600">Upload and restore your data</p>
                 </div>
                 <button
                   onClick={handleImportData}
-                  className="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors w-full sm:w-auto justify-center"
                 >
                   <Upload className="w-4 h-4 mr-2" />
                   Import
