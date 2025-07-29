@@ -51,20 +51,20 @@ const ClockIn = () => {
   return (
     <div className="max-w-4xl mx-auto space-y-6">
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Clock-In with Face ID</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Clock-In with Face ID</h1>
         <p className="text-gray-600">Use facial recognition to clock in and out securely</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Main Clock-In Area */}
-        <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200 p-8">
+        <div className="md:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-8">
           <div className="text-center space-y-6">
             {/* Current Time Display */}
             <div className="bg-gray-50 rounded-lg p-6">
-              <div className="text-4xl font-bold text-gray-900">
+              <div className="text-2xl sm:text-4xl font-bold text-gray-900">
                 {currentTime.toLocaleTimeString()}
               </div>
-              <div className="text-lg text-gray-600 mt-2">
+              <div className="text-base sm:text-lg text-gray-600 mt-2">
                 {currentTime.toLocaleDateString('en-US', { 
                   weekday: 'long', 
                   year: 'numeric', 
@@ -76,7 +76,7 @@ const ClockIn = () => {
 
             {/* Camera/Scan Area */}
             <div className="relative">
-              <div className="w-80 h-60 mx-auto bg-gray-900 rounded-lg overflow-hidden relative">
+              <div className="w-full max-w-sm h-48 sm:h-60 mx-auto bg-gray-900 rounded-lg overflow-hidden relative">
                 {isScanning ? (
                   <video
                     ref={videoRef}

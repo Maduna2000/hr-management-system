@@ -10,6 +10,7 @@ import Forms from './pages/Forms';
 import Contracts from './pages/Contracts';
 import Skills from './pages/Skills';
 import Tasks from './pages/Tasks';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contracts" element={<Contracts />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/tasks" element={<Tasks />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Layout>
     </Router>
